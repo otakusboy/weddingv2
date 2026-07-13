@@ -9,7 +9,7 @@
 // Replace with your deployed Web App URL after setting up Google Sheets.
 // See README.md → "Connect Google Sheets with Google Apps Script"
 export const GOOGLE_APPS_SCRIPT_URL =
-  'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+  'https://script.google.com/macros/s/AKfycby3BO2_t1kZkw-ioMhAuU0JZZSfH7ANcTvNcNJSaVZ27NX0YYDLVzaFLNYL1j1MqRvY/exec'
 
 // Field names sent in the POST body — keep in sync with your Apps Script
 export const RSVP_FIELD_MAP = {
@@ -94,6 +94,8 @@ export const closing = {
   ],
   signOff: 'Salam hangat dari kami yang berbahagia,',
   names: couple.displayNames,
+  // Replace with your footer illustration when ready, e.g. '/src/assets/envelope.png'
+  footerImage: null as string | null,
 } as const
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────

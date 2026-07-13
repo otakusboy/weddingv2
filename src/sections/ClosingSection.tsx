@@ -1,22 +1,6 @@
 import { closing } from '../constants/siteContent'
 import { SectionDivider } from '../components/SectionDivider'
-
-function EnvelopeIcon() {
-  return (
-    <svg
-      viewBox="0 0 48 32"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.2"
-      className="mx-auto mt-10 h-8 w-12 text-espresso/50"
-      aria-hidden="true"
-    >
-      <path d="M2 6h44v20H2z" />
-      <path d="M2 6l22 14L46 6" />
-      <path d="M8 26l6-8M40 26l-6-8" strokeLinecap="round" />
-    </svg>
-  )
-}
+import { ImagePlaceholder } from '../components/ImagePlaceholder'
 
 export function ClosingSection() {
   return (
@@ -41,7 +25,14 @@ export function ClosingSection() {
         {closing.names}
       </p>
 
-      <EnvelopeIcon />
+      <div className="mx-auto mt-10 w-12">
+        <ImagePlaceholder
+          src={closing.footerImage}
+          alt="Ilustrasi penutup"
+          aspectRatio="aspect-[3/2]"
+          className="rounded-sm"
+        />
+      </div>
     </div>
   )
 }

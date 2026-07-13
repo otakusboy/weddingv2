@@ -4,9 +4,9 @@ export function VenueSection() {
   return (
     <div className="px-8 py-8 text-center">
       <h2 className="font-script text-4xl text-espresso">Lokasi</h2>
-      <p className="mt-6 font-body text-base font-semibold text-espresso">
-        {venue.name}
-      </p>
+        <p className="mt-6 font-body text-2xl font-semibold text-espresso">
+          {venue.name}
+        </p>
       <p className="mt-3 font-body text-xs leading-relaxed text-muted-brown">
         {venue.address}
       </p>
