@@ -8,11 +8,18 @@ import {
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 
+const GUEST_COUNTS = Array.from(
+  { length: rsvp.guestCountMax },
+  (_, i) => i + 1,
+)
+
 export function RSVPSection() {
   const [name, setName] = useState('')
   const [attendance, setAttendance] = useState<'Yes' | 'No' | ''>('')
+  const [guestCount, setGuestCount] = useState<number | ''>('')
   const [status, setStatus] = useState<FormStatus>('idle')
   const [nameError, setNameError] = useState('')
+  const [guestError, setGuestError] = useState('')
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -29,14 +36,23 @@ export function RSVPSection() {
     if (!attendance) {
       return
     }
+    if (attendance === 'Yes' && guestCount === '') {
+      setGuestError('Jumlah tamu wajib diisi.')
+      return
+    }
 
     setNameError('')
+    setGuestError('')
     setStatus('submitting')
+
+    const guests =
+      attendance === 'Yes' && typeof guestCount === 'number' ? guestCount : 0
 
     try {
       const payload = {
         [RSVP_FIELD_MAP.name]: trimmedName,
         [RSVP_FIELD_MAP.attendance]: attendance,
+        [RSVP_FIELD_MAP.guestCount]: guests,
       }
 
       const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
@@ -67,6 +83,11 @@ export function RSVPSection() {
       </div>
     )
   }
+
+  const canSubmit =
+    Boolean(attendance) &&
+    (attendance === 'No' || guestCount !== '') &&
+    status !== 'submitting'
 
   return (
     <div className="px-8 py-8">
@@ -123,7 +144,13 @@ export function RSVPSection() {
                   name="attendance"
                   value={option}
                   checked={attendance === option}
-                  onChange={() => setAttendance(option)}
+                  onChange={() => {
+                    setAttendance(option)
+                    if (option === 'No') {
+                      setGuestCount('')
+                      setGuestError('')
+                    }
+                  }}
                   disabled={status === 'submitting'}
                   className="h-4 w-4 accent-maroon"
                 />
@@ -133,6 +160,39 @@ export function RSVPSection() {
           </div>
         </fieldset>
 
+        {attendance === 'Yes' && (
+          <fieldset>
+            <legend className="block font-body text-[11px] font-medium uppercase tracking-wider text-espresso">
+              Berapa tamu <span className="text-maroon">*</span>
+            </legend>
+            <div className="mt-4 flex gap-8">
+              {GUEST_COUNTS.map((count) => (
+                <label
+                  key={count}
+                  className="inline-flex cursor-pointer items-center gap-2.5 font-body text-sm text-espresso"
+                >
+                  <input
+                    type="radio"
+                    name="guestCount"
+                    value={count}
+                    checked={guestCount === count}
+                    onChange={() => {
+                      setGuestCount(count)
+                      if (guestError) setGuestError('')
+                    }}
+                    disabled={status === 'submitting'}
+                    className="h-4 w-4 accent-maroon"
+                  />
+                  {count}
+                </label>
+              ))}
+            </div>
+            {guestError && (
+              <p className="mt-2 font-body text-xs text-maroon">{guestError}</p>
+            )}
+          </fieldset>
+        )}
+
         {status === 'error' && (
           <p className="text-center font-body text-xs text-maroon">
             {rsvp.errorMessage}
@@ -141,7 +201,7 @@ export function RSVPSection() {
 
         <button
           type="submit"
-          disabled={status === 'submitting' || !attendance}
+          disabled={!canSubmit}
           className="w-full rounded-sm bg-maroon py-3.5 font-body text-sm font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-maroon-dark disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === 'submitting' ? 'Mengirim...' : 'Submit'}

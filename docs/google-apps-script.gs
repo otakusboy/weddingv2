@@ -1,7 +1,8 @@
 /**
  * Google Apps Script for RSVP → Google Sheets
  * ───────────────────────────────────────────
- * 1. Create a Google Sheet with headers: Timestamp | Name | Attendance
+ * 1. Create a Google Sheet with headers:
+ *      Timestamp | Name | Attendance | GuestCount
  * 2. Extensions → Apps Script → paste this file
  * 3. Deploy → New deployment → Web app
  *    - Execute as: Me
@@ -11,6 +12,7 @@
  * Field names must match RSVP_FIELD_MAP in siteContent.ts:
  *   - name
  *   - attendance  ("Yes" or "No")
+ *   - guestCount  (1–3 when Yes, else 0)
  */
 
 function doPost(e) {
@@ -22,6 +24,7 @@ function doPost(e) {
       new Date(),
       data.name || '',
       data.attendance || '',
+      data.guestCount ?? '',
     ]);
 
     return ContentService

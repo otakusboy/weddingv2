@@ -9,12 +9,13 @@
 // Replace with your deployed Web App URL after setting up Google Sheets.
 // See README.md → "Connect Google Sheets with Google Apps Script"
 export const GOOGLE_APPS_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycby3BO2_t1kZkw-ioMhAuU0JZZSfH7ANcTvNcNJSaVZ27NX0YYDLVzaFLNYL1j1MqRvY/exec'
+  'https://script.google.com/macros/s/AKfycbzi3RbATj6t5DtNTNCBjsbNvw_iLIr-iaeo1BadT9ajMCsVsJ8ti-XQPtOk5HiHfdOc/exec'
 
 // Field names sent in the POST body — keep in sync with your Apps Script
 export const RSVP_FIELD_MAP = {
   name: 'name',
   attendance: 'attendance',
+  guestCount: 'guestCount',
 } as const
 
 // ─── Couple ───────────────────────────────────────────────────────────────────
@@ -53,6 +54,7 @@ export const rsvp = {
   description:
     'Mohon konfirmasi kehadiran Anda untuk acara akad dan resepsi pernikahan kami pada 22 Agustus 2026.',
   nameMaxLength: 20,
+  guestCountMax: 3,
   successMessage:
     'Terima kasih atas konfirmasi kehadiran Anda. Sampai jumpa di hari bahagia kami.',
   errorMessage:

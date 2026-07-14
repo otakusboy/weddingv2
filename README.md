@@ -118,8 +118,8 @@ export const venue = {
 1. Go to [Google Sheets](https://sheets.google.com) and create a new spreadsheet.
 2. Add headers in row 1, for example:
 
-| Timestamp | Name | Attendance |
-|---|---|---|
+| Timestamp | Name | Attendance | GuestCount |
+|---|---|---|---|
 
 ### Step B — Add the Apps Script
 
@@ -137,6 +137,7 @@ function doPost(e) {
       new Date(),
       data.name || '',
       data.attendance || '',
+      data.guestCount ?? '',
     ]);
 
     return ContentService
@@ -171,8 +172,9 @@ Field mapping (keep in sync with the script):
 
 ```ts
 export const RSVP_FIELD_MAP = {
-  name: 'name',           // → data.name in Apps Script
-  attendance: 'attendance', // → data.attendance in Apps Script
+  name: 'name',             // → data.name
+  attendance: 'attendance', // → data.attendance ("Yes" | "No")
+  guestCount: 'guestCount', // → data.guestCount (1–3, or 0 if No)
 }
 ```
 
