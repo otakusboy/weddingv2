@@ -11,6 +11,7 @@ export function CalendarStrip() {
         src={weddingDate.calendarImage}
         alt={`Kalender ${weddingDate.monthYear}`}
         aspectRatio="aspect-[300/109]"
+        fit="contain"
         className="rounded-sm"
       />
     </div>

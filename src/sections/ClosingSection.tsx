@@ -25,12 +25,14 @@ export function ClosingSection() {
         {closing.names}
       </p>
 
-      <div className="mx-auto mt-10 w-12">
+      <div className="mx-auto mt-10 w-24">
         <ImagePlaceholder
           src={closing.footerImage}
           alt="Ilustrasi penutup"
-          aspectRatio="aspect-[3/2]"
-          className="rounded-sm"
+          aspectRatio="aspect-auto"
+          fit="contain"
+          className="h-auto w-full"
+          floatHint
         />
       </div>
     </div>

@@ -11,7 +11,7 @@ function App() {
           <HeroCover />
         </SectionShell>
 
-        <SectionShell id="invite-section">
+        <SectionShell id="invite-section" flow>
           <InviteContentSection />
         </SectionShell>
 

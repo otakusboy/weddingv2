@@ -33,7 +33,7 @@ export const weddingDate = {
   calendarDays: [16, 17, 18, 19, 20, 21, 22],
   highlightedDay: 22,
   // Replace with your calendar image when ready, e.g. '/src/assets/calendar.png'
-  calendarImage: null as string | null,
+  calendarImage: '/calendar.svg',
 } as const
 
 export const events = {
@@ -94,17 +94,15 @@ export const closing = {
   ],
   signOff: 'Salam hangat dari kami yang berbahagia,',
   names: couple.displayNames,
-  // Replace with your footer illustration when ready, e.g. '/src/assets/envelope.png'
-  footerImage: null as string | null,
+  // Replace with your footer illustration when ready, e.g. '/envelope.svg'
+  footerImage: '/envelope.svg',
 } as const
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 export const hero = {
   subtitle: 'The Wedding of',
-  // Replace with your scroll CTA image when ready, e.g. '/src/assets/scroll.png'
-  scrollImage: null as string | null,
   // Couple photo in the hero polaroid frame
-  image: null as string | null,
+  image: '/header.svg',
   // Small image shown to the right of the groom's name — e.g. ring icon, monogram, or photo
-  groomAccentImage: null as string | null,
+  groomAccentImage: '/ring.svg',
 } as const

@@ -3,6 +3,8 @@ interface ImagePlaceholderProps {
   alt: string
   className?: string
   aspectRatio?: string
+  /** How the image fills its box — use "contain" when you must not crop */
+  fit?: 'cover' | 'contain'
   fadeIn?: boolean
   floatHint?: boolean
 }
@@ -12,6 +14,7 @@ export function ImagePlaceholder({
   alt,
   className = '',
   aspectRatio = 'aspect-[4/5]',
+  fit = 'cover',
   fadeIn = false,
   floatHint = false,
 }: ImagePlaceholderProps) {
@@ -21,13 +24,14 @@ export function ImagePlaceholder({
   ]
     .filter(Boolean)
     .join(' ')
+  const fitClass = fit === 'contain' ? 'object-contain' : 'object-cover'
 
   if (src) {
     return (
       <img
         src={src}
         alt={alt}
-        className={`block w-full object-cover ${aspectRatio} ${animationClass} ${className}`}
+        className={`block w-full ${fitClass} ${aspectRatio} ${animationClass} ${className}`}
       />
     )
   }

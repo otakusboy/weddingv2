@@ -6,7 +6,7 @@ import { events, invitation, quote } from '../constants/siteContent'
 /** Invite section layout — matches the reference image order */
 export function InviteContentSection() {
   return (
-    <div className="flex flex-1 flex-col justify-center gap-6 overflow-y-auto px-8 py-6">
+    <div className="flex flex-1 flex-col justify-center gap-6 px-8 py-8">
       <CountdownTimer />
 
       <div className="text-center">
