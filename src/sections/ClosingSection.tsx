@@ -4,7 +4,7 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder'
 
 export function ClosingSection() {
   return (
-    <div className="px-8 py-8">
+    <div className="px-8 pb-10 pt-2">
       <SectionDivider />
 
       <div className="mt-10 space-y-5 text-center">

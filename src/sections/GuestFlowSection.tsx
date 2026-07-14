@@ -8,8 +8,10 @@ export function GuestFlowSection() {
     <>
       <VenueSection />
       <QRSection />
-      <RSVPSection />
-      <ClosingSection />
+      <div>
+        <RSVPSection />
+        <ClosingSection />
+      </div>
     </>
   )
 }

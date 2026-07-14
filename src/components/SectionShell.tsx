@@ -17,8 +17,10 @@ export function SectionShell({
   return (
     <section
       id={id}
-      className={`flex snap-start snap-always flex-col ${
-        flow ? 'min-h-full' : 'h-dvh sm:h-full'
+      className={`flex flex-col ${
+        flow
+          ? ''
+          : 'h-dvh snap-start sm:h-full'
       } ${className}`}
     >
       {children}

@@ -90,7 +90,7 @@ export function RSVPSection() {
     status !== 'submitting'
 
   return (
-    <div className="px-8 py-8">
+    <div className="px-8 pb-4 pt-8">
       <h2 className="text-center font-script text-4xl leading-tight text-maroon">
         {rsvp.heading}
       </h2>
