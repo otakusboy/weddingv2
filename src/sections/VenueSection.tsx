@@ -7,7 +7,7 @@ export function VenueSection() {
         <p className="mt-6 font-body text-2xl font-semibold text-espresso">
           {venue.name}
         </p>
-      <p className="mt-3 font-body text-xs leading-relaxed text-muted-brown">
+      <p className="mx-auto mt-3 w-4/5 font-body text-xs leading-relaxed text-muted-brown">
         {venue.address}
       </p>
       <a

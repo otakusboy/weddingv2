@@ -65,11 +65,11 @@ export const rsvp = {
 export const venue = {
   name: 'Kopi Keboen Klaten',
   address:
-    'Jl. Merbabu No.8, Gondangrejo, Klaten Selatan, Klaten, Jawa Tengah 57418',
-  mapsUrl: 'https://maps.google.com/?q=Kopi+Keboen+Klaten',
+    'Jl. Srigading, Dusun 2, Tonggalan, Kec. Klaten Tengah, Kabupaten Klaten, Jawa Tengah 57424',
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Kopi+Keboen+Klaten',
   qrLabel: 'Scan untuk lokasi',
-  // Replace with your QR image path when ready, e.g. '/src/assets/qr-code.png'
-  qrImage: null as string | null,
+  // Replace with your QR image path when ready, e.g. '/qr.svg'
+  qrImage: '/qr.svg',
 } as const
 
 // ─── Quote / verse ────────────────────────────────────────────────────────────

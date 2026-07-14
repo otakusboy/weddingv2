@@ -9,6 +9,7 @@ export function QRSection() {
           src={venue.qrImage}
           alt="QR code lokasi venue"
           aspectRatio="aspect-square"
+          fit="contain"
           className="rounded-sm"
         />
       </div>
