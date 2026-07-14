@@ -14,7 +14,7 @@ export function VenueSection() {
         href={venue.mapsUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 inline-block font-body text-xs uppercase tracking-wider text-maroon underline underline-offset-4 transition-colors hover:text-maroon-dark"
+        className="mt-6 inline-block font-body text-xs uppercase tracking-wider text-amber-950 underline underline-offset-4 transition-colors hover:text-amber-950/80"
       >
         Buka di Google Maps
       </a>

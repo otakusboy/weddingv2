@@ -76,7 +76,7 @@ export function RSVPSection() {
   if (status === 'success') {
     return (
       <div className="px-8 py-8 text-center">
-        <h2 className="font-script text-4xl text-maroon">Terima Kasih</h2>
+        <h2 className="font-script text-4xl text-amber-950">Terima Kasih</h2>
         <p className="mt-6 font-body text-sm leading-relaxed text-warm-brown">
           {rsvp.successMessage}
         </p>
@@ -91,7 +91,7 @@ export function RSVPSection() {
 
   return (
     <div className="px-8 pb-4 pt-8">
-      <h2 className="text-center font-script text-4xl leading-tight text-maroon">
+      <h2 className="text-center font-script text-4xl leading-tight text-amber-950">
         {rsvp.heading}
       </h2>
       <p className="mt-5 text-center font-body text-sm leading-relaxed text-warm-brown">
@@ -104,7 +104,7 @@ export function RSVPSection() {
             htmlFor="rsvp-name"
             className="block font-body text-[11px] font-medium uppercase tracking-wider text-espresso"
           >
-            Nama <span className="text-maroon">*</span>
+            Nama <span className="text-amber-950">*</span>
           </label>
           <div className="relative mt-2">
             <input
@@ -117,7 +117,7 @@ export function RSVPSection() {
               }}
               placeholder="Your full name"
               maxLength={rsvp.nameMaxLength}
-              className="w-full rounded-sm bg-input-bg px-4 py-3 font-body text-sm text-espresso placeholder:text-muted-brown/60 focus:outline-none focus:ring-1 focus:ring-border-brown/40"
+              className="h-12 w-full rounded-sm bg-input-bg px-4 font-body text-sm text-espresso placeholder:text-muted-brown/60 focus:outline-none focus:ring-1 focus:ring-border-brown/40"
               disabled={status === 'submitting'}
             />
             <span className="pointer-events-none absolute bottom-2 right-3 font-body text-[10px] text-muted-brown">
@@ -125,7 +125,7 @@ export function RSVPSection() {
             </span>
           </div>
           {nameError && (
-            <p className="mt-2 font-body text-xs text-maroon">{nameError}</p>
+            <p className="mt-2 font-body text-xs text-amber-950">{nameError}</p>
           )}
         </div>
 
@@ -163,7 +163,7 @@ export function RSVPSection() {
         {attendance === 'Yes' && (
           <fieldset>
             <legend className="block font-body text-[11px] font-medium uppercase tracking-wider text-espresso">
-              Berapa tamu <span className="text-maroon">*</span>
+              Berapa tamu <span className="text-amber-950">*</span>
             </legend>
             <div className="mt-4 flex gap-8">
               {GUEST_COUNTS.map((count) => (
@@ -188,13 +188,13 @@ export function RSVPSection() {
               ))}
             </div>
             {guestError && (
-              <p className="mt-2 font-body text-xs text-maroon">{guestError}</p>
+              <p className="mt-2 font-body text-xs text-amber-950">{guestError}</p>
             )}
           </fieldset>
         )}
 
         {status === 'error' && (
-          <p className="text-center font-body text-xs text-maroon">
+          <p className="text-center font-body text-xs text-amber-950">
             {rsvp.errorMessage}
           </p>
         )}
@@ -202,7 +202,7 @@ export function RSVPSection() {
         <button
           type="submit"
           disabled={!canSubmit}
-          className="w-full rounded-sm bg-maroon py-3.5 font-body text-sm font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-maroon-dark disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-sm bg-amber-950 py-3.5 font-body text-sm font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-amber-950/90 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === 'submitting' ? 'Mengirim...' : 'Submit'}
         </button>

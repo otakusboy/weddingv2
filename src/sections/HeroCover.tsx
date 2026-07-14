@@ -19,7 +19,7 @@ export function HeroCover() {
 
   return (
     <div className="flex flex-1 flex-col items-center px-8 pb-10 pt-8">
-      <p className="font-script text-3xl text-espresso/90">{hero.subtitle}</p>
+      <p className="font-script text-3xl text-amber-950">{hero.subtitle}</p>
 
       <div className="flex w-full flex-1 flex-col items-center justify-center">
         <div className="w-full max-w-[220px]">

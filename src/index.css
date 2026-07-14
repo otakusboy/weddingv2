@@ -6,18 +6,20 @@
   --font-serif: 'Libre Caslon Display', Georgia, serif;
   --font-calendar: 'Fredoka', system-ui, sans-serif;
 
-  --color-countdown-num: #2d2926;
-  --color-countdown-label: #8e8b82;
+  --color-countdown-num: var(--color-amber-950);
+  --color-countdown-label: var(--color-amber-950);
 
-  --color-ivory: #f7f3ec;
-  --color-espresso: #3d2e24;
-  --color-warm-brown: #5c4a3a;
-  --color-muted-brown: #8a7a68;
+  /* Tailwind olive-100 */
+  --color-ivory: #f4f4f0;
+  --color-espresso: var(--color-amber-950);
+  --color-warm-brown: var(--color-amber-950);
+  --color-muted-brown: var(--color-amber-950);
   --color-border-brown: #a8957e;
   --color-maroon: #6b2c3e;
   --color-maroon-dark: #5a2433;
   --color-banner-blue: #2a7ab8;
-  --color-input-bg: #ece7de;
+  /* Slightly darker than page bg (olive-200) */
+  --color-input-bg: #e8e8e3;
   --color-placeholder: #c8c0b4;
 }
 
@@ -32,6 +34,7 @@ body {
   height: 100%;
   overflow: hidden;
   font-family: var(--font-body);
+  color: var(--color-amber-950);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
