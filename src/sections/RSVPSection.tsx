@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import {
+  calendar,
   GOOGLE_APPS_SCRIPT_URL,
   RSVP_FIELD_MAP,
   rsvp,
 } from '../constants/siteContent'
+import { SectionDivider } from '../components/SectionDivider'
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -18,6 +20,9 @@ export function RSVPSection() {
   const [attendance, setAttendance] = useState<'Yes' | 'No' | ''>('')
   const [guestCount, setGuestCount] = useState<number | ''>('')
   const [status, setStatus] = useState<FormStatus>('idle')
+  const [submittedAttendance, setSubmittedAttendance] = useState<
+    'Yes' | 'No' | ''
+  >('')
   const [nameError, setNameError] = useState('')
   const [guestError, setGuestError] = useState('')
 
@@ -63,6 +68,7 @@ export function RSVPSection() {
       })
 
       if (response.type === 'opaque' || response.ok) {
+        setSubmittedAttendance(attendance)
         setStatus('success')
         return
       }
@@ -76,10 +82,23 @@ export function RSVPSection() {
   if (status === 'success') {
     return (
       <div className="px-8 py-8 text-center">
-        <h2 className="font-script text-4xl text-amber-950">Terima Kasih</h2>
+        <SectionDivider />
+        <h2 className="mt-6 font-script text-4xl text-amber-950">Terima Kasih</h2>
         <p className="mt-6 font-body text-sm leading-relaxed text-warm-brown">
-          {rsvp.successMessage}
+          {submittedAttendance === 'Yes'
+            ? rsvp.successMessageAttending
+            : rsvp.successMessage}
         </p>
+        {submittedAttendance === 'Yes' && (
+          <a
+            href={calendar.addToGoogleUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-block rounded-sm border border-amber-950/25 px-6 py-3 font-body text-sm text-warm-brown transition-colors hover:bg-amber-950/5"
+          >
+            {calendar.addToGoogleLabel}
+          </a>
+        )}
       </div>
     )
   }
@@ -91,7 +110,8 @@ export function RSVPSection() {
 
   return (
     <div className="px-8 pb-4 pt-8">
-      <h2 className="text-center font-script text-4xl leading-tight text-amber-950">
+      <SectionDivider />
+      <h2 className="mt-6 text-center font-script text-4xl leading-tight text-amber-950">
         {rsvp.heading}
       </h2>
       <p className="mt-5 text-center font-body text-sm leading-relaxed text-warm-brown">

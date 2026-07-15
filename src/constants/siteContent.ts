@@ -48,6 +48,12 @@ export const events = {
   },
 } as const
 
+export const calendar = {
+  addToGoogleUrl:
+    'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Iqbal+%26+Putria+Wedding&dates=20260822T150000/20260822T160000',
+  addToGoogleLabel: 'Add to Google Calendar',
+} as const
+
 // ─── RSVP ─────────────────────────────────────────────────────────────────────
 export const rsvp = {
   heading: 'Kami tunggu kehadiranmu',
@@ -56,7 +62,9 @@ export const rsvp = {
   nameMaxLength: 20,
   guestCountMax: 3,
   successMessage:
-    'Terima kasih atas konfirmasi kehadiran Anda. Sampai jumpa di hari bahagia kami.',
+    'Terima kasih atas konfirmasi kehadiran Anda.',
+  successMessageAttending:
+    'Terima kasih atas konfirmasi kehadiran Anda. Sampai jumpa di hari bahagia kami — jangan lupa buat pengingat di Google Kalender melalui tombol di bawah.',
   errorMessage:
     'Maaf, konfirmasi belum terkirim. Silakan coba lagi dalam beberapa saat.',
 } as const

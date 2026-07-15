@@ -3,7 +3,7 @@ export function SectionDivider() {
     <div className="flex justify-center" role="separator" aria-hidden="true">
       <svg
         viewBox="0 0 300 14"
-        className="h-3.5 w-full max-w-[300px] text-amber-950"
+        className="h-3.5 w-[90%] text-amber-950"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
