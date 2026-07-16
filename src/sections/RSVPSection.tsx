@@ -84,7 +84,7 @@ export function RSVPSection() {
       <div className="px-8 py-8 text-center">
         <SectionDivider />
         <h2 className="mt-6 font-script text-4xl text-amber-950">Terima Kasih</h2>
-        <p className="mt-6 font-body text-sm leading-relaxed text-warm-brown">
+        <p className="mt-4 font-body text-sm leading-relaxed text-warm-brown">
           {submittedAttendance === 'Yes'
             ? rsvp.successMessageAttending
             : rsvp.successMessage}
@@ -114,7 +114,7 @@ export function RSVPSection() {
       <h2 className="mt-6 text-center font-script text-4xl leading-tight text-amber-950">
         {rsvp.heading}
       </h2>
-      <p className="mt-5 text-center font-body text-sm leading-relaxed text-warm-brown">
+      <p className="mt-4 text-center font-body text-sm leading-relaxed text-warm-brown">
         {rsvp.description}
       </p>
 

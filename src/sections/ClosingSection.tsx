@@ -4,16 +4,16 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder'
 
 export function ClosingSection() {
   return (
-    <div className="px-8 pb-10 pt-2">
+    <div className="px-8 pb-10 pt-8">
       <SectionDivider />
 
-      <div className="mt-10 space-y-5 text-center">
+      <div className="mt-6 space-y-4 text-center">
         <p className="font-body text-sm leading-relaxed text-warm-brown">
           {closing.paragraphs[0]}
         </p>
         <p className="font-body text-sm leading-relaxed text-warm-brown">
           {closing.paragraphs[1]}{' '}
-          <span className="italic">{closing.noGiftsNote}</span>
+          <span className="font-bold">{closing.noGiftsNote}</span>
         </p>
       </div>
 

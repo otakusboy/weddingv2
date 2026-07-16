@@ -4,7 +4,7 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder'
 export function QRSection() {
   return (
     <div className="px-8 pb-4">
-      <div className="mx-auto w-full max-w-[180px]">
+      <div className="mx-auto w-full max-w-[180px] rounded-[14px] border-[3px] border-amber-950 bg-white p-3">
         <ImagePlaceholder
           src={venue.qrImage}
           alt="QR code lokasi venue"

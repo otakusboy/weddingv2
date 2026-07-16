@@ -20,7 +20,7 @@ export function HeroCover() {
   return (
     <div className="flex flex-1 flex-col items-center px-8 pb-10 pt-8">
       <div className="flex w-full flex-1 flex-col items-center justify-center">
-        <p className="mb-6 font-script text-3xl text-amber-950">
+        <p className="mb-6 font-script text-3xl font-bold text-amber-950">
           {hero.subtitle}
         </p>
 
@@ -35,7 +35,7 @@ export function HeroCover() {
           />
         </div>
 
-        <h1 className="mt-10 text-center font-script leading-tight text-espresso">
+        <h1 className="mt-10 flex flex-col items-center gap-4 text-center font-script leading-none text-espresso">
           <div className="inline-flex items-center justify-center gap-3">
             <span className="inline-flex items-center gap-2 text-7xl">
               {couple.groom}
@@ -50,9 +50,7 @@ export function HeroCover() {
               />
             </div>
           </div>
-          <br />
           <span className="text-4xl">&amp;</span>
-          <br />
           <span className="text-7xl">{couple.bride}</span>
         </h1>
       </div>

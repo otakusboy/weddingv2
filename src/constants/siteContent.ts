@@ -58,7 +58,7 @@ export const calendar = {
 export const rsvp = {
   heading: 'Kami tunggu kehadiranmu',
   description:
-    'Mohon konfirmasi kehadiran Anda untuk acara akad dan resepsi pernikahan kami pada 22 Agustus 2026.',
+    'Mohon konfirmasi kehadiran Anda untuk acara akad dan resepsi pernikahan kami.',
   nameMaxLength: 20,
   guestCountMax: 3,
   successMessage:
