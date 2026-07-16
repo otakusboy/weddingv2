@@ -58,7 +58,7 @@ export const calendar = {
 export const rsvp = {
   heading: 'Kami tunggu kehadiranmu',
   description:
-    'Mohon konfirmasi kehadiran Anda untuk acara akad dan resepsi pernikahan kami.',
+    'Mohon konfirmasi kehadiran anda pada acara pernikahan kami',
   nameMaxLength: 20,
   guestCountMax: 3,
   successMessage:
@@ -99,7 +99,7 @@ export const invitation = {
 // ─── Closing ──────────────────────────────────────────────────────────────────
 export const closing = {
   paragraphs: [
-    'Setelah bertahun-tahun berpetualang bersama, akhirnya kami akan merayakan hari pernikahan kami ditemani orang-orang yang paling kami sayangi. Kehadiranmu akan sangat berarti bagi kami ketika memulai babak baru.',
+    'Setelah bertahun-tahun bersama, kini kami bersiap untuk merayakan hari pernikahan ditemani dengan orang-orang tersayang. Kehadiran serta doa restu Anda akan sangat berarti bagi awal perjalanan baru kami.',
     'Tiada yang dapat kami ungkapkan selain rasa terima kasih yang mendalam atas kehadiran serta doa dari Bapak/Ibu/Saudara/i di hari bahagia kami. Oleh karena itu, dengan segala kerendahan hati,',
   ],
   noGiftsNote:

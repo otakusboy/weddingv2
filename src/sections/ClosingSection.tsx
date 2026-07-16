@@ -12,8 +12,10 @@ export function ClosingSection() {
           {closing.paragraphs[0]}
         </p>
         <p className="font-body text-sm leading-relaxed text-warm-brown">
-          {closing.paragraphs[1]}{' '}
-          <span className="font-bold">{closing.noGiftsNote}</span>
+          {closing.paragraphs[1]}
+        </p>
+        <p className="font-body text-sm font-bold leading-relaxed text-warm-brown">
+          {closing.noGiftsNote}
         </p>
       </div>
 

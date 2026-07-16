@@ -5,7 +5,9 @@ export function VenueSection() {
   return (
     <div className="px-8 py-8 text-center">
       <SectionDivider />
-      <h2 className="mt-6 font-script text-4xl text-espresso">Lokasi</h2>
+      <h2 className="mt-6 font-script text-[2.75rem] leading-none text-espresso">
+        Lokasi
+      </h2>
         <p className="mt-4 font-body text-2xl font-semibold text-espresso">
           {venue.name}
         </p>
