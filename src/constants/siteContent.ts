@@ -82,7 +82,7 @@ export const venue = {
 
 // ─── Quote / verse ────────────────────────────────────────────────────────────
 export const quote = {
-  arabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',
+  arabic: '﷽',
   text: 'Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.',
   source: 'Q.S. Ar Rum:21',
 } as const
@@ -99,9 +99,11 @@ export const invitation = {
 // ─── Closing ──────────────────────────────────────────────────────────────────
 export const closing = {
   paragraphs: [
-    'Setelah bertahun-tahun menapaki perjalanan cinta, kami bersyukur atas segala rahmat yang telah diberikan. Kehadiran dan doa restu Anda akan menjadi kebahagiaan tersendiri bagi kami berdua.',
-    'Atas perhatian dan doa restu yang Bapak/Ibu/Saudara/i berikan, kami ucapkan terima kasih.',
+    'Setelah bertahun-tahun berpetualang bersama, akhirnya kami akan merayakan hari pernikahan kami ditemani orang-orang yang paling kami sayangi. Kehadiranmu akan sangat berarti bagi kami ketika memulai babak baru.',
+    'Tiada yang dapat kami ungkapkan selain rasa terima kasih yang mendalam atas kehadiran serta doa dari Bapak/Ibu/Saudara/i di hari bahagia kami. Oleh karena itu, dengan segala kerendahan hati,',
   ],
+  noGiftsNote:
+    'kami tidak menerima sumbangan/tanda kasih dalam bentuk apapun.',
   signOff: 'Salam hangat dari kami yang berbahagia,',
   names: couple.displayNames,
   // Replace with your footer illustration when ready, e.g. '/envelope.svg'

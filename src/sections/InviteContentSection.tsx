@@ -10,13 +10,13 @@ export function InviteContentSection() {
       <CountdownTimer />
 
       <div className="text-center">
-        <p className="font-body text-base leading-loose text-espresso">
+        <p className="font-arabic text-[32px] leading-loose text-espresso">
           {quote.arabic}
         </p>
-        <p className="mt-4 font-body text-[11px] italic leading-relaxed text-warm-brown">
+        <p className="mt-4 font-body text-sm italic leading-relaxed text-warm-brown">
           {quote.text}
         </p>
-        <p className="mt-3 font-body text-[11px] text-muted-brown">
+        <p className="mt-3 font-body text-sm text-muted-brown">
           {quote.source}
         </p>
       </div>

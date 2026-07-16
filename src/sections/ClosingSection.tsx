@@ -8,20 +8,19 @@ export function ClosingSection() {
       <SectionDivider />
 
       <div className="mt-10 space-y-5 text-center">
-        {closing.paragraphs.map((paragraph) => (
-          <p
-            key={paragraph.slice(0, 24)}
-            className="font-body text-sm leading-relaxed text-warm-brown"
-          >
-            {paragraph}
-          </p>
-        ))}
+        <p className="font-body text-sm leading-relaxed text-warm-brown">
+          {closing.paragraphs[0]}
+        </p>
+        <p className="font-body text-sm leading-relaxed text-warm-brown">
+          {closing.paragraphs[1]}{' '}
+          <span className="italic">{closing.noGiftsNote}</span>
+        </p>
       </div>
 
       <p className="mt-8 text-center font-body text-sm text-warm-brown">
         {closing.signOff}
       </p>
-      <p className="mt-2 text-center font-script text-3xl text-espresso">
+      <p className="mt-4 text-center font-script text-3xl text-espresso">
         {closing.names}
       </p>
 

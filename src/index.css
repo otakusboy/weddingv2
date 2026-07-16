@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-script: 'Cookie', cursive;
+  --font-script: 'Great Vibes', cursive;
+  --font-arabic: 'Amiri', serif;
   --font-body: 'Poppins', system-ui, sans-serif;
   --font-serif: 'Libre Caslon Display', Georgia, serif;
   --font-calendar: 'Fredoka', system-ui, sans-serif;
@@ -45,6 +46,12 @@ body {
 
 .font-script {
   font-family: var(--font-script);
+  font-weight: 400;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+  font-weight: 400;
 }
 
 .font-body {

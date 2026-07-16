@@ -151,7 +151,7 @@ export function RSVPSection() {
 
         <fieldset>
           <legend className="block font-body text-[11px] font-medium uppercase tracking-wider text-espresso">
-            Apakah akan datang ke venue ?
+            Apakah Anda akan menghadiri acara kami?
           </legend>
           <div className="mt-4 flex gap-8">
             {(['Yes', 'No'] as const).map((option) => (
@@ -183,7 +183,8 @@ export function RSVPSection() {
         {attendance === 'Yes' && (
           <fieldset>
             <legend className="block font-body text-[11px] font-medium uppercase tracking-wider text-espresso">
-              Berapa tamu <span className="text-amber-950">*</span>
+              Berapa jumlah tamu yang akan hadir?{' '}
+              <span className="text-amber-950">*</span>
             </legend>
             <div className="mt-4 flex gap-8">
               {GUEST_COUNTS.map((count) => (
